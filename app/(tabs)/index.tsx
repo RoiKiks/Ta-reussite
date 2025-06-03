@@ -1,17 +1,17 @@
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
-function BasicExample() {
+const Home = () => {
   return (
-    <ButtonGroup aria-label="Basic example">
-      <Button variant="secondary">Left</Button>
-      <Button variant="secondary">Middle</Button>
-      <Button variant="secondary">Right</Button>
-    </ButtonGroup>
+    <View style={styles.container}>
+      <Text style={styles.text}>Bienvenue sur l'accueil</Text>
+    </View>
   );
-}
+};
 
-export default BasicExample;
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#F0F4FF', },
+  text: { fontSize: 24, fontWeight: 'bold', color: '#333' },
+});
 
-
-TEST
+export default Home;
