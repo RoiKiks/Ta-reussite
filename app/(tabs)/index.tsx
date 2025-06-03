@@ -1,17 +1,25 @@
+import ResumeLessonButton from '@/components/ResumeLessonButton';
+import SubjectWidget from '@/components/SubjectWidget';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Bienvenue sur l'accueil</Text>
+      <ResumeLessonButton />
+      <SubjectWidget subject="Matière" />
+      {/* Tu peux ajouter d'autres widgets ou composants ici */}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#F0F4FF', },
-  text: { fontSize: 24, fontWeight: 'bold', color: '#333' },
+  container: {
+    paddingTop: 20,
+    alignItems: 'center',
+    backgroundColor: '#f0F4FF',
+    flex: 1,
+  },
 });
 
 export default Home;
